@@ -77,6 +77,14 @@ A system is treated as reaching the G stage only when all of the following are s
   - **Relevance (R)**: generated tasks align with actual household needs.
   - **Task Coverage (TC)**: generated tasks cover a diverse set of household task categories.
 ![Task decomposition and difficulty analysis pipeline](figures/image.png)
+**Table 1. Summary of one illustrative G-stage decision rule.**  
+This figure shows one possible way to operationalize the **G stage** through two components: **Task Generalization (T)** and **Autonomous Task Generation (A)**.
+
+For task generalization, **T = μ − γ · σ**, where **μ** is the mean accuracy across task categories, **σ** is the standard deviation of those accuracies, and **γ** controls how strongly unstable cross-category performance is penalized. In simple terms, **T** rewards systems that are both accurate on average and consistent across categories.
+
+For autonomous task generation, **A = α · R + (1 − α) · TC**, where **R** measures how relevant the generated tasks are to real household needs, **TC** measures how broadly they cover different household task categories, and **α** controls the balance between these two terms.
+
+The thresholds shown in the figure, such as **T ≥ 75%** and **A ≥ 0.75**, are intended as example values only. Their purpose is to show how a G-stage decision rule can be made explicit in practice: a system should not reach **G** merely by performing well on a few tasks, but by demonstrating both **stable generalization** and **meaningful autonomous task generation**.```
 In simple terms, the G stage is meant to show that the system can both **generalize beyond previously encountered task instances** and **produce meaningful and sufficiently diverse tasks of its own**.  
 This is why G is not defined as “doing well on many tasks,” but as showing evidence of foundational cross-task transfer and autonomy.
 
