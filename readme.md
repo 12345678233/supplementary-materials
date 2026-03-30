@@ -76,7 +76,7 @@ A system is treated as reaching the G stage only when all of the following are s
 - **Autonomous Task Generation Capability (A)**:
   - **Relevance (R)**: generated tasks align with actual household needs.
   - **Task Coverage (TC)**: generated tasks cover a diverse set of household task categories.
-
+![Task decomposition and difficulty analysis pipeline](figures/image.png)
 In simple terms, the G stage is meant to show that the system can both **generalize beyond previously encountered task instances** and **produce meaningful and sufficiently diverse tasks of its own**.  
 This is why G is not defined as “doing well on many tasks,” but as showing evidence of foundational cross-task transfer and autonomy.
 
